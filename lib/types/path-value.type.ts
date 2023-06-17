@@ -8,6 +8,9 @@ type IsAny<T> = unknown extends T
     : true
   : false;
 
+/**
+ * @publicApi
+ */
 export type PathImpl<T, Key extends keyof T> = Key extends string
   ? IsAny<T[Key]> extends true
     ? never

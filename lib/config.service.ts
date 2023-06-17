@@ -18,6 +18,9 @@ type ValidatedResult<
   T,
 > = WasValidated extends true ? T : T | undefined;
 
+/**
+ * @publicApi
+ */
 export interface ConfigGetOptions {
   /**
    * If present, "get" method will try to automatically
@@ -29,6 +32,9 @@ export interface ConfigGetOptions {
 
 type KeyOf<T> = keyof T extends never ? string : keyof T;
 
+/**
+ * @publicApi
+ */
 @Injectable()
 export class ConfigService<
   K = Record<string, unknown>,

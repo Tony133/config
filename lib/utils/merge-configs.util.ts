@@ -1,5 +1,8 @@
 import { set } from 'lodash';
 
+/**
+ * @publicApi
+ */
 export function mergeConfigObject(
   host: Record<string, any>,
   partial: Record<string, any>,
